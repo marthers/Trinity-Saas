@@ -8,8 +8,8 @@
       <div class = "login-logo-name">
         <div
           class = "login-logo"
-          src="./../../assets/images/ShunXiangLogo.png"
-          alt="舜翔众邦"/>
+          src   = "./../../assets/images/ShunXiangLogo.png"
+          alt   = "舜翔众邦"/>
         <div class = "login-name">
           舜翔科技有限公司
         </div>
@@ -19,29 +19,29 @@
       </p>
     </div>
     <div
-      v-if = "!registerShow"
-      class="login-con">
+      v-if  = "!registerShow"
+      class = "login-con">
       <div class = "tabs-con">
         <div
-          :class = "[!selectPassword ? '' : 'login-select' , 'password-login']"
-          @click = "passwordSelected">密码登录</div>
+          :class   = "[!selectPassword ? '' : 'login-select' , 'password-login']"
+            @click = "passwordSelected">密码登录</div>
         <div class = "tabs-line"/>
         <div
-          :class = "[!selectPassword ? 'login-select' : '' , 'verify-login']"
-          @click = "verifySelected">验证码登录</div>
+          :class   = "[!selectPassword ? 'login-select' : '' , 'verify-login']"
+            @click = "verifySelected">验证码登录</div>
       </div>
       <Input
-        v-model.trim="userName"
-        :placeholder="userNamePlaceholder"
-        :maxlength="11"
+                  v-model.trim = "userName"
+                :placeholder   = "userNamePlaceholder"
+                :maxlength     = "11"
         number
         autofocus
         class = "login-input">
       <Input
-        v-if = "selectPassword"
-        v-model.trim="password"
-        :maxlength = "16"
-        placeholder="请输入密码"
+                  v-if         = "selectPassword"
+                  v-model.trim = "password"
+                :maxlength     = "16"
+                  placeholder  = "请输入密码"
         autofocus
         class = "login-input">
       <!-- <Input v-model="verifyCode" placeholder="请输入验证码" autofocus  class = "verify-input" v-else  search :enter-button="getVerifyCode" on-search="getVerify"/> -->
@@ -49,59 +49,59 @@
         v-else
         class = "login-get-verify">
         <Input
-          v-model="loginVerify"
-          :maxlength="11"
-          placeholder="请输入验证码"
+                    v-model     = "loginVerify"
+                  :maxlength    = "11"
+                    placeholder = "请输入验证码"
           number
           autofocus
           class = "login-verify">
         <div
-          :class = "[ countDown ? 'count-down-button' : '','get-login-verify-button']"
-          @click="getVerify">
+          :class   = "[ countDown ? 'count-down-button' : '','get-login-verify-button']"
+            @click = "getVerify">
           {{
             getVerifyCode
           }}
         </div>
       </div>
       <div
-        v-if = "graphValidateCodeShow"
+        v-if  = "graphValidateCodeShow"
         class = "login-get-verify">
         <Input
-          v-model="graphCode"
-          :maxlength="4"
-          placeholder="请输入右侧的图形验证码"
+                    v-model     = "graphCode"
+                  :maxlength    = "4"
+                    placeholder = "请输入右侧的图形验证码"
           autofocus
           class = "login-verify">
         <img
-          :src = "graphCodeSrc"
-          class = "graph-code get-login-verify-button">
+          :src    = "graphCodeSrc"
+            class = "graph-code get-login-verify-button">
       </div>
       <div class = "two-button">
         <div
-          v-if = "selectPassword"
+          v-if  = "selectPassword"
           class = "remember-login">
           <div
-            :class = "[notRemember ? 'not-remember-login' : 'remembered-login']"
-            @click="notRemember = !notRemember"/>
+            :class   = "[notRemember ? 'not-remember-login' : 'remembered-login']"
+              @click = "notRemember = !notRemember"/>
           <!-- <div v-show= "notRemember" class = "not-remember-login" @click="notRemember = !notRemember"></div> -->
           <!-- <div v-show = "!notRemember" class = "remember-login" @click="notRemember = !notRemember"></div> -->
           <p
-            class = "remember-password"
-            @click="notRemember = !notRemember">
+            class  = "remember-password"
+            @click = "notRemember = !notRemember">
             记住密码
           </p>
         </div>
         <div
-          class = "forgotten-password"
+          class  = "forgotten-password"
           @click = "resetPassord">
           忘记密码
         </div>
       </div>
       <div
-        class = "login-button main-button"
+        class  = "login-button main-button"
         @click = "login">登录</div>
       <div
-        class = "register-button  main-button"
+        class  = "register-button  main-button"
         @click = "registerClicked">注册</div>
     </div>
 
@@ -115,24 +115,24 @@
         }}
       </div>
       <Input
-        v-model.trim="registerUsername"
-        :placeholder="userNamePlaceholder"
-        :maxlength="11"
+                  v-model.trim = "registerUsername"
+                :placeholder   = "userNamePlaceholder"
+                :maxlength     = "11"
         number
         autofocus
         class = "login-input">
       <!-- <Input v-model="registerVerifyCode" placeholder="请输入验证码" autofocus  number class = "verify-input" search enter-button="获取验证码"/> -->
       <div class = "login-get-verify">
         <Input
-          v-model.trim="registerVerifyCode"
-          :maxlength="6"
-          placeholder="请输入验证码"
+                    v-model.trim = "registerVerifyCode"
+                  :maxlength     = "6"
+                    placeholder  = "请输入验证码"
           number
           autofocus
           class = "login-verify">
         <div
-          :class = "[ countDown ? 'count-down-button' : '','get-login-verify-button']"
-          @click="getVerify">
+          :class   = "[ countDown ? 'count-down-button' : '','get-login-verify-button']"
+            @click = "getVerify">
           {{
             getVerifyCode
           }}
@@ -145,11 +145,11 @@
                 class      = "control has-icons-left"
             >
                 <input
-                                                                                                                                                                                                        class       = "login-input"
-                                                                                                                                                                                                        type        = "password"
-                                                                                                                                                                                                        placeholder = "Text input"
-                                                                                                                                                                                                      :value        = "props.value"
-                                                                                                                                                                                                        @input      = "props.updatePassword($event.target.value)"
+                                                                                                                                                                                                                  class       = "login-input"
+                                                                                                                                                                                                                  type        = "password"
+                                                                                                                                                                                                                  placeholder = "Text input"
+                                                                                                                                                                                                                :value        = "props.value"
+                                                                                                                                                                                                                  @input      = "props.updatePassword($event.target.value)"
                 >
                 <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
@@ -157,30 +157,30 @@
             </div>
         </vue-password> -->
       <Input
-        v-if = "!changeDevice"
-        v-model.trim="registerPassword"
-        :maxlength="16"
-        placeholder="请设置密码(8-16位字母数字组合)"
+                  v-if         = "!changeDevice"
+                  v-model.trim = "registerPassword"
+                :maxlength     = "16"
+                  placeholder  = "请设置密码(8-16位字母数字组合)"
         autofocus
-        class = "login-input"
+        class      = "login-input"
         @on-change = "passwordChange"
-        @on-focus = "focusPassword">
+        @on-focus  = "focusPassword">
       <Input
-        v-if = "!changeDevice"
-        v-model.trim="confirmRegisterPassword"
-        :maxlength="16"
-        placeholder="请再次输入密码"
+                  v-if         = "!changeDevice"
+                  v-model.trim = "confirmRegisterPassword"
+                :maxlength     = "16"
+                  placeholder  = "请再次输入密码"
         autofocus
         class = "login-input">
       <div
-        class = "login-button main-button"
-        @click="registerOrResetPassword">
+        class  = "login-button main-button"
+        @click = "registerOrResetPassword">
         {{
           registerOrSubmit
         }}
       </div>
       <div
-        class = "register-button  main-button"
+        class  = "register-button  main-button"
         @click = "backToLogin">返回</div>
     </div>
   </div>
@@ -208,31 +208,31 @@ export default {
   },
   data () {
     return {
-      score: 10,
-      selectPassword: true,
-      userName: '',
-      password: '',
-      verifyCode: '',
-      userNamePlaceholder: '请输入用户名',
-      notRemember: true,
-      registerShow: false,
-      registerUsername: '',
-      registerVerifyCode: '',
-      registerPassword: '',
+      score                  : 10,
+      selectPassword         : true,
+      userName               : '',
+      password               : '',
+      verifyCode             : '',
+      userNamePlaceholder    : '请输入用户名',
+      notRemember            : true,
+      registerShow           : false,
+      registerUsername       : '',
+      registerVerifyCode     : '',
+      registerPassword       : '',
       confirmRegisterPassword: '',
-      getVerifyCode: '获取验证码',
-      timer: null,
-      count: '',
-      countDown: false,
-      registerOrReset: '',
-      registerOrSubmit: '确定',
-      changeDevice: false,
-      alertType: 'error',
-      alertMsg: '系统异常，请及时联系管理员',
-      graphValidateCodeShow: false,
-      graphCode: '',
-      graphCodeSrc: 'http://img2.imgtn.bdimg.com/it/u=1190478869,2154054603&fm=26&gp=0.jpg',
-      user_info: {}
+      getVerifyCode          : '获取验证码',
+      timer                  : null,
+      count                  : '',
+      countDown              : false,
+      registerOrReset        : '',
+      registerOrSubmit       : '确定',
+      changeDevice           : false,
+      alertType              : 'error',
+      alertMsg               : '系统异常，请及时联系管理员',
+      graphValidateCodeShow  : false,
+      graphCode              : '',
+      graphCodeSrc           : 'http://img2.imgtn.bdimg.com/it/u=1190478869,2154054603&fm=26&gp=0.jpg',
+      user_info              : {}
     }
   },
   methods: {
@@ -245,7 +245,7 @@ export default {
     },
     backToLogin () {
       this.getVerifyCode = '获取验证码'
-      this.countDown = false
+      this.countDown     = false
       if (this.timer) {
         console.log(`this.timer=${this.timer}`)
         clearInterval(this.timer)
@@ -258,7 +258,7 @@ export default {
     // 注册
     registerClicked () {
       this.getVerifyCode = '获取验证码'
-      this.countDown = false
+      this.countDown     = false
       if (this.timer) {
         console.log(`this.timer=${this.timer}`)
         clearInterval(this.timer)
@@ -266,11 +266,11 @@ export default {
       } else {
         console.log(`!this.timer=${this.timer}`)
       }
-      this.registerShow = true
-      this.registerOrReset = '用户注册'
+      this.registerShow     = true
+      this.registerOrReset  = '用户注册'
       this.registerOrSubmit = '注册'
       // 及时清空
-      this.password = ''
+      this.password    = ''
       this.loginVerify = ''
     },
     ifNotUuid () {
@@ -297,22 +297,22 @@ export default {
             console.log(baseConfig)
             this.ifNotUuid()
             axios.request({
-              url: baseConfig.baseUrl.dev + 'user/sign_in_web_mobile_password',
-              method: 'post',
+              url    : baseConfig.baseUrl.dev + 'user/sign_in_web_mobile_password',
+              method : 'post',
               headers: {
-                'Content-Type': 'application/json; charset=utf-8',
-                'Trinity-Token': '',
+                'Content-Type'    : 'application/json; charset=utf-8',
+                'Trinity-Token'   : '',
                 'Request-Datatime': new Date().getTime()
               },
               data: {
                 'priority': '3',
-                'group': '',
-                'data': {
-                  'phone': this.userName,
-                  'password': md5(this.password),
+                'group'   : '',
+                'data'    : {
+                  'phone'      : this.userName,
+                  'password'   : md5(this.password),
                   'verify_code': '',
-                  'captcha': '',
-                  'device_id': localStorage.getItem('uuid') != null ? localStorage.getItem('uuid') : uuid(8, 16),
+                  'captcha'    : '',
+                  'device_id'  : localStorage.getItem('uuid') != null ? localStorage.getItem('uuid'): uuid(8, 16),
                   'device_name': window.navigator.userAgent
                 }
               }
@@ -333,7 +333,7 @@ export default {
                       console.log('this.user_info:')
                       console.log(this.user_info)
                       this.$Message.success({
-                        content: '登录成功',
+                        content : '登录成功',
                         duration: 5,
                         closable: true
                       })
@@ -342,7 +342,7 @@ export default {
                       })
                     } else {
                       this.$Message.error({
-                        content: '登录失败',
+                        content : '登录失败',
                         duration: 5,
                         closable: true
                       })
@@ -353,18 +353,18 @@ export default {
                     if (res.data.code) {
                       if (res.data.code == 105) {
                         this.$Message.info({
-                          content: res.data.msg ? res.data.msg : '更换设备需要验证',
+                          content : res.data.msg ? res.data.msg: '更换设备需要验证',
                           duration: 5,
                           closable: true
                         })
-                        this.changeDevice = true
-                        this.registerOrReset = '设备验证'
+                        this.changeDevice     = true
+                        this.registerOrReset  = '设备验证'
                         this.registerOrSubmit = '验证'
-                        this.registerShow = true
+                        this.registerShow     = true
                       }
                     } else {
                       this.$Message.error({
-                        content: res.data.msg ? res.data.msg : '登录失败',
+                        content : res.data.msg ? res.data.msg: '登录失败',
                         duration: 5,
                         closable: true
                       })
@@ -378,7 +378,7 @@ export default {
                 // 请求失败
                 else {
                   this.$Message.error({
-                    content: res.status,
+                    content : res.status,
                     duration: 5,
                     closable: true
                   })
@@ -395,7 +395,7 @@ export default {
                 console.log('err:')
                 console.log(err)
                 this.$Message.error({
-                  content: '网络异常，请联系管理员处理',
+                  content : '网络异常，请联系管理员处理',
                   duration: 5,
                   closable: true
                 })
@@ -403,7 +403,7 @@ export default {
           } else {
             console.log('password is invalidate')
             this.$Message.error({
-              content: '密码不正确，须输入8-16位数字字母',
+              content : '密码不正确，须输入8-16位数字字母',
               duration: 5,
               closable: true
             })
@@ -413,7 +413,7 @@ export default {
         else {
           console.log('username is invalidate')
           this.$Message.error({
-            content: '用户名有误!',
+            content : '用户名有误!',
             duration: 3,
             closable: true
           })
@@ -428,22 +428,22 @@ export default {
             this.ifNotUuid()
             // 注册或者重置密码
             axios.request({
-              url: baseConfig.baseUrl.dev + 'user/sign_in_web_mobile_verify_code',
-              method: 'post',
+              url    : baseConfig.baseUrl.dev + 'user/sign_in_web_mobile_verify_code',
+              method : 'post',
               headers: {
-                'Content-Type': 'application/json; charset=utf-8',
-                'Trinity-Token': '',
+                'Content-Type'    : 'application/json; charset=utf-8',
+                'Trinity-Token'   : '',
                 'Request-Datatime': new Date().getTime()
               },
               data: {
                 'priority': '3',
-                'group': '',
-                'data': {
-                  'phone': this.userName,
-                  'password': '',
+                'group'   : '',
+                'data'    : {
+                  'phone'      : this.userName,
+                  'password'   : '',
                   'verify_code': this.loginVerify,
-                  'captcha': '',
-                  'device_id': localStorage.getItem('uuid') != null ? localStorage.getItem('uuid') : uuid(8, 16),
+                  'captcha'    : '',
+                  'device_id'  : localStorage.getItem('uuid') != null ? localStorage.getItem('uuid'): uuid(8, 16),
                   'device_name': window.navigator.userAgent
                 }
               }
@@ -464,7 +464,7 @@ export default {
                       console.log('this.user_info:')
                       console.log(this.user_info)
                       this.$Message.success({
-                        content: '登录成功',
+                        content : '登录成功',
                         duration: 5,
                         closable: true
                       })
@@ -473,7 +473,7 @@ export default {
                       })
                     } else {
                       this.$Message.error({
-                        content: '登录失败',
+                        content : '登录失败',
                         duration: 5,
                         closable: true
                       })
@@ -482,7 +482,7 @@ export default {
                   // 登录失败
                   else {
                     this.$Message.error({
-                      content: res.data.msg ? res.data.msg : '登录失败',
+                      content : res.data.msg ? res.data.msg: '登录失败',
                       duration: 5,
                       closable: true
                     })
@@ -495,7 +495,7 @@ export default {
                 // 请求失败
                 else {
                   this.$Message.error({
-                    content: res.status,
+                    content : res.status,
                     duration: 5,
                     closable: true
                   })
@@ -512,7 +512,7 @@ export default {
                 console.log('err:')
                 console.log(err)
                 this.$Message.error({
-                  content: '网络异常，请联系管理员处理',
+                  content : '网络异常，请联系管理员处理',
                   duration: 5,
                   closable: true
                 })
@@ -520,7 +520,7 @@ export default {
           } else {
             console.log('loginVerify is invalidate')
             this.$Message.error({
-              content: '验证码格式有误！',
+              content : '验证码格式有误！',
               duration: 3,
               closable: true
             })
@@ -530,7 +530,7 @@ export default {
         else {
           console.log('username is invalidate')
           this.$Message.error({
-            content: '用户名有误!',
+            content : '用户名有误!',
             duration: 3,
             closable: true
           })
@@ -545,11 +545,11 @@ export default {
     },
     // 忘记密码
     resetPassord () {
-      this.registerShow = true
-      this.registerOrReset = '找回密码'
+      this.registerShow     = true
+      this.registerOrReset  = '找回密码'
       this.registerOrSubmit = '确定'
       // 及时清空
-      this.password = ''
+      this.password    = ''
       this.loginVerify = ''
       // 及时携带用户已经输入的手机号
       this.registerUsername = this.userName
@@ -564,17 +564,17 @@ export default {
       })
     },
     passwordSelected () {
-      this.selectPassword = true
+      this.selectPassword      = true
       this.userNamePlaceholder = '请输入用户名'
       // 及时清空
-      this.password = ''
+      this.password    = ''
       this.loginVerify = ''
     },
     verifySelected () {
-      this.selectPassword = false
+      this.selectPassword      = false
       this.userNamePlaceholder = '请输入手机号'
       // 及时清空
-      this.password = ''
+      this.password    = ''
       this.loginVerify = ''
     },
     registerOrResetPassword () {
@@ -586,22 +586,22 @@ export default {
         if (validateMobilephone(this.registerUsername) && validateVerificationCode(this.registerVerifyCode) && validatePassword(this.registerPassword) && validatePassword(this.confirmRegisterPassword) && this.registerPassword === this.confirmRegisterPassword) {
           this.ifNotUuid()
           axios.request({
-            url: baseConfig.baseUrl.dev + 'user/sign_up_web',
-            method: 'post',
+            url    : baseConfig.baseUrl.dev + 'user/sign_up_web',
+            method : 'post',
             headers: {
-              'Content-Type': 'application/json; charset=utf-8',
-              'Trinity-Token': '',
+              'Content-Type'    : 'application/json; charset=utf-8',
+              'Trinity-Token'   : '',
               'Request-Datatime': new Date().getTime()
             },
             data: {
               'priority': '3',
-              'group': '',
-              'data': {
-                'phone': this.registerUsername,
-                'password': md5(this.confirmRegisterPassword),
+              'group'   : '',
+              'data'    : {
+                'phone'      : this.registerUsername,
+                'password'   : md5(this.confirmRegisterPassword),
                 'verify_code': this.registerVerifyCode,
-                'captcha': '',
-                'device_id': localStorage.getItem('uuid') != null ? localStorage.getItem('uuid') : uuid(8, 16),
+                'captcha'    : '',
+                'device_id'  : localStorage.getItem('uuid') != null ? localStorage.getItem('uuid'): uuid(8, 16),
                 'device_name': window.navigator.userAgent
               }
             }
@@ -622,7 +622,7 @@ export default {
                     console.log('this.user_info:')
                     console.log(this.user_info)
                     this.$Message.success({
-                      content: '登录成功',
+                      content : '登录成功',
                       duration: 5,
                       closable: true
                     })
@@ -631,7 +631,7 @@ export default {
                     })
                   } else {
                     this.$Message.error({
-                      content: '登录失败',
+                      content : '登录失败',
                       duration: 5,
                       closable: true
                     })
@@ -640,7 +640,7 @@ export default {
                 // 登录失败
                 else {
                   this.$Message.error({
-                    content: res.data.msg ? res.data.msg : '登录失败',
+                    content : res.data.msg ? res.data.msg: '登录失败',
                     duration: 5,
                     closable: true
                   })
@@ -649,7 +649,7 @@ export default {
               // 请求失败
               else {
                 this.$Message.error({
-                  content: res.status,
+                  content : res.status,
                   duration: 5,
                   closable: true
                 })
@@ -672,27 +672,27 @@ export default {
         } else {
           if (!validateMobilephone(this.registerUsername)) {
             this.$Message.warning({
-              content: '手机号格式有误',
+              content : '手机号格式有误',
               duration: 5,
               closable: true
             })
           } else if (!validateVerificationCode(this.registerVerifyCode)) {
             this.$Message.warning({
-              content: '验证码格式有误',
+              content : '验证码格式有误',
               duration: 5,
               closable: true
             })
           } else {
             if (!validatePassword(this.registerPassword) || !validatePassword(this.confirmRegisterPassword)) {
               this.$Message.warning({
-                content: '密码格式有误',
+                content : '密码格式有误',
                 duration: 5,
                 closable: true
               })
             } else {
               if (this.registerPassword === this.confirmRegisterPassword) {
                 this.$Message.warning({
-                  content: '两次输入的密码不相同',
+                  content : '两次输入的密码不相同',
                   duration: 5,
                   closable: true
                 })
@@ -708,7 +708,7 @@ export default {
       // 当前并非登录获取验验证码，如果输入的手机号不合法
       if (!validateMobilephone(this.userName) && !validateMobilephone(this.registerUsername)) {
         this.$Message.error({
-          content: '手机号格式有误!',
+          content : '手机号格式有误!',
           duration: 3,
           closable: true
         })
@@ -717,15 +717,15 @@ export default {
         if (this.registerShow) {
           if (!validateMobilephone(this.registerUsername)) {
             this.$Message.error({
-              content: '手机号格式有误!',
+              content : '手机号格式有误!',
               duration: 3,
               closable: true
             })
             if (!this.timer) {
               clearInterval(this.timer)
-              this.timer = null
+              this.timer         = null
               this.getVerifyCode = '获取验证码'
-              this.countDown = false
+              this.countDown     = false
             }
           } else {
             if (!this.timer) {
@@ -734,28 +734,28 @@ export default {
                 if (this.count > 0 && this.count <= TIME_COUNT) {
                   this.count--
                   this.getVerifyCode = '重新发送' + this.count + 'S'
-                  this.countDown = true
+                  this.countDown     = true
                 } else {
                   clearInterval(this.timer)
-                  this.timer = null
+                  this.timer         = null
                   this.getVerifyCode = '获取验证码'
-                  this.countDown = false
+                  this.countDown     = false
                 }
               }, 1000)
               this.ifNotUuid()
               axios.request({
-                url: baseConfig.baseUrl.dev + 'verify_code/send',
-                method: 'post',
+                url    : baseConfig.baseUrl.dev + 'verify_code/send',
+                method : 'post',
                 headers: {
-                  'Content-Type': 'application/json; charset=utf-8',
-                  'Trinity-Token': '',
+                  'Content-Type'    : 'application/json; charset=utf-8',
+                  'Trinity-Token'   : '',
                   'Request-Datatime': new Date().getTime()
                 },
                 data: {
                   'priority': '3',
-                  'group': '',
-                  'data': {
-                    'phone': !this.registerShow ? this.userName : this.registerUsername
+                  'group'   : '',
+                  'data'    : {
+                    'phone': !this.registerShow ? this.userName: this.registerUsername
                   }
                 }
               })
@@ -767,7 +767,7 @@ export default {
                     if (res.data.success && res.data.msg == 'success') {
                       // 获取验证码的数据包
                       this.$Message.success({
-                        content: '验证码已发送',
+                        content : '验证码已发送',
                         duration: 5,
                         closable: true
                       })
@@ -775,7 +775,7 @@ export default {
                     // 获取验证码失败
                     else {
                       this.$Message.error({
-                        content: res.data.msg ? res.data.msg : '获取验证码失败',
+                        content : res.data.msg ? res.data.msg: '获取验证码失败',
                         duration: 5,
                         closable: true
                       })
@@ -788,7 +788,7 @@ export default {
                   // 请求失败
                   else {
                     this.$Message.error({
-                      content: res.status,
+                      content : res.status,
                       duration: 5,
                       closable: true
                     })
@@ -807,15 +807,15 @@ export default {
           // 当前登录获取验验证码，如果输入的手机号不合法
           if (!validateMobilephone(this.userName)) {
             this.$Message.error({
-              content: '手机号格式有误!',
+              content : '手机号格式有误!',
               duration: 3,
               closable: true
             })
             if (!this.timer) {
               clearInterval(this.timer)
-              this.timer = null
+              this.timer         = null
               this.getVerifyCode = '获取验证码'
-              this.countDown = false
+              this.countDown     = false
             }
           }
           // /当前并非登录获取验验证码，如果输入的手机号合法
@@ -826,28 +826,28 @@ export default {
                 if (this.count > 0 && this.count <= TIME_COUNT) {
                   this.count--
                   this.getVerifyCode = '重新发送' + this.count + 'S'
-                  this.countDown = true
+                  this.countDown     = true
                 } else {
                   clearInterval(this.timer)
-                  this.timer = null
+                  this.timer         = null
                   this.getVerifyCode = '获取验证码'
-                  this.countDown = false
+                  this.countDown     = false
                 }
               }, 1000)
               this.ifNotUuid()
               axios.request({
-                url: baseConfig.baseUrl.dev + 'verify_code/send',
-                method: 'post',
+                url    : baseConfig.baseUrl.dev + 'verify_code/send',
+                method : 'post',
                 headers: {
-                  'Content-Type': 'application/json; charset=utf-8',
-                  'Trinity-Token': '',
+                  'Content-Type'    : 'application/json; charset=utf-8',
+                  'Trinity-Token'   : '',
                   'Request-Datatime': new Date().getTime()
                 },
                 data: {
                   'priority': '3',
-                  'group': '',
-                  'data': {
-                    'phone': !this.registerShow ? this.userName : this.registerUsername
+                  'group'   : '',
+                  'data'    : {
+                    'phone': !this.registerShow ? this.userName: this.registerUsername
                   }
                 }
               })
@@ -859,7 +859,7 @@ export default {
                     if (res.data.success && res.data.msg == 'success') {
                       // 获取验证码的数据包
                       this.$Message.success({
-                        content: '获取验证码成功',
+                        content : '获取验证码成功',
                         duration: 5,
                         closable: true
                       })
@@ -867,7 +867,7 @@ export default {
                     // 获取验证码失败
                     else {
                       this.$Message.error({
-                        content: res.data.msg ? res.data.msg : '获取验证码失败',
+                        content : res.data.msg ? res.data.msg: '获取验证码失败',
                         duration: 5,
                         closable: true
                       })
@@ -880,7 +880,7 @@ export default {
                   // 请求失败
                   else {
                     this.$Message.error({
-                      content: res.status,
+                      content : res.status,
                       duration: 5,
                       closable: true
                     })
