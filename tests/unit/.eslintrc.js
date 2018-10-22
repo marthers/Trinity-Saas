@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    mocha: true
+    mocha: false
   },
   rules: {
     'import/no-extraneous-dependencies': 'off'

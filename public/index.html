@@ -11,6 +11,17 @@
     <noscript>
       <strong>We're sorry but iview-admin doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <script>
+
+        function plusReady(){
+            alert( "Device: " + plus.device.model );
+        }
+        if(window.plus){
+            plusReady();
+        }else{
+            document.addEventListener("plusready",plusReady,false);
+        }
+    </script>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>

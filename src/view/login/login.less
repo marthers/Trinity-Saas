@@ -5,6 +5,169 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; 
+    .register-con {
+        position: absolute;
+        right: 160px;
+        top: 50%;
+        transform: translateY(-60%);
+        width: 380px;
+        // height : 488px;
+        color : #FFF;
+        //  内边框
+        box-sizing: border-box;
+        border : 1px inset;
+        border-image: -webkit-linear-gradient( #2AA5FF 100%, #91B8FF 100%);
+        border-image: -moz-linear-gradien( #2AA5FF 100%, #91B8FF 100%);
+        border-image: linear-gradient( #2AA5FF 100%, #91B8FF 100%);
+        box-shadow: 0 2px 12px 0 #0EE4EA;
+        .register {
+            width : 100%;
+            height : 40px;
+            line-height: 40px;
+            font-size : 20px;
+            text-align : center;
+            border-bottom : 1px solid #4A90E2;
+        }
+        .login-input{
+            margin : 20px 19px 0  19px;
+            .ivu-input {
+                width : 342px;
+                height: 40px;
+                line-height: 40px;
+                text-align: left;
+                font-size : 14px;
+                border : 1px solid #DEDEDE;
+                color : #333;
+                border-radius : 0;
+            }
+        }
+        // .verify-input {
+        //     margin : 20px 19px 0  19px;
+        //     width : 342px;
+        //     .ivu-input  {
+        //         height: 40px;
+        //         line-height: 40px;
+        //         text-align: left;
+        //         font-size : 14px;
+        //         border : 1px solid #DEDEDE;
+        //         color : #333;
+        //         border-radius : 0;
+        //     }
+        //     .ivu-input-search{
+        //         border-radius: 0;
+        //         background-color: #4291BA !important;
+        //         font-size : 16px;
+        //     }
+        // }
+        .login-get-verify {
+            margin : 20px 19px 0  19px;
+            width : 342px;
+            display : flex;
+            flex-direction: row;
+            .login-verify {
+                width : 222px;
+                height: 40px;
+            }
+            .ivu-input  {
+                height: 40px;
+                line-height: 40px;
+                text-align: left;
+                font-size : 14px;
+                border : 1px solid #DEDEDE;
+                color : #333;
+                border-radius : 0;
+            }
+            .get-login-verify-button {
+                height: 40px;
+                width : 120px;
+                color : #FFF;
+                font-size : 16px;
+                line-height: 40px;
+                text-align: center;
+                background: #4291BA;
+                cursor: pointer;
+            }
+            .get-login-verify-button :link {
+                background: rgba(59,165,178,1);
+            }
+            .get-login-verify-button :visited {
+                background: rgba(72,168,218,1);
+            }
+            .get-login-verify-button :hover {
+                background: rgba(59,165,178,1);
+            }
+            .get-login-verify-button :active {
+                background: rgba(72,168,218,1);
+            }
+            .count-down-button {
+                background-color: #9B9B9B;
+                pointer-events: none;
+                cursor: not-allowed;
+            }
+        }
+        //password
+        .VuePassword {
+            width : 342px;
+            height: 40px;
+            // overflow: hidden;
+            .VuePassword__Input{
+                .control {
+                    .login-input {
+                        width : 342px;
+                        height : 40px;
+                        line-height: 40px;
+                        text-align: left;
+                        color : #333;
+                        font-size : 14px;
+                    }
+                }
+            }
+            .VuePassword__Toggle {
+                top : 10px;
+            }
+        }
+        .main-button {
+            width : 342px;
+            height : 40px;
+            border-radius: 20px;
+            line-height: 40px;
+            text-align: center;
+            color : #fff;
+            margin : 10px auto;
+            font-size : 18px;
+            cursor: pointer;
+        }
+        .login-button {
+            background:linear-gradient(180deg,rgba(59,165,178,1) 0%,rgba(72,168,218,1) 100%);
+            margin-top:40px;
+        }
+        .login-button:link {
+            background: rgba(59,165,178,1);
+        }
+        .login-button:visited {
+            background: rgba(72,168,218,1);
+        }
+        .login-button:hover {
+            background: rgba(59,165,178,1);
+        }
+        .login-button:active {
+            background: rgba(72,168,218,1);
+        }
+        .register-button {
+            width:339px;
+            height:40px;
+            border-radius:20px;
+            border:1px solid rgba(66,145,186,1);
+            margin-top : 15px;
+            margin-bottom : 20px;
+        }
+    }
     &-con{
         position: absolute;
         right: 160px;
@@ -55,6 +218,7 @@
                 line-height : 50px;
                 text-align: center;
                 border-bottom : 1px solid #12171B;
+                cursor: pointer;
             }
             .tabs-line{
                 width:1px;
@@ -79,9 +243,33 @@
                 border-radius : 0;
             }
         }
-        .verify-input {
+        // .verify-input {
+        //     margin : 20px 19px 0  19px;
+        //     width : 342px;
+        //     .ivu-input  {
+        //         height: 40px;
+        //         line-height: 40px;
+        //         text-align: left;
+        //         font-size : 14px;
+        //         border : 1px solid #DEDEDE;
+        //         color : #333;
+        //         border-radius : 0;
+        //     }
+        //     .ivu-input-search{
+        //         border-radius: 0;
+        //         background-color: #4291BA !important;
+        //         font-size : 16px;
+        //     }
+        // }
+        .login-get-verify {
             margin : 20px 19px 0  19px;
             width : 342px;
+            display : flex;
+            flex-direction: row;
+            .login-verify {
+                width : 222px;
+                height: 40px;
+            }
             .ivu-input  {
                 height: 40px;
                 line-height: 40px;
@@ -91,17 +279,27 @@
                 color : #333;
                 border-radius : 0;
             }
-            .ivu-input-search{
-                border-radius: 0;
-                background-color: #4291BA !important;
+            .get-login-verify-button {
+                height: 40px;
+                width : 120px;
+                color : #FFF;
                 font-size : 16px;
+                line-height: 40px;
+                text-align: center;
+                background-color: #4291BA;
+                cursor: pointer;
+            }
+            .count-down-button {
+                background-color: #9B9B9B;
+                pointer-events: none;
+                cursor: not-allowed;
             }
         }
         .two-button {
             width : 340px;
-            height : 20px;
+            height : 36px;
             margin : 10px auto;
-            line-height: 20px;
+            line-height: 36px;
             font-size : 14px;
             position: relative;
             color : #DEDEDE;
@@ -110,6 +308,7 @@
                 font-size: 14px;
                 position : absolute;
                 right:0;
+                cursor: pointer;
             }
             .remember-login {
                 position : absolute;
@@ -121,24 +320,28 @@
                 .not-remember-login {
                     width : 12px;
                     height : 12px;
-                    margin : 4px 3px 0 0 ;
+                    margin : 12px 3px 0 0 ;
                     background-image: url('./../../assets/images/login/not.png');
                     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
                         background-image: url('./../../assets/images/login/not@2x.png');
-                        background-size: cover;
+                        background-size: contain;
                         background-position: center;
                     } 
                 }
-                .remember-login {
+                .remembered-login {
                     width : 12px;
                     height : 12px;
-                    margin : 4px 3px 0 0 ;
+                    margin : 12px 3px 0 0 ;
                     background-image: url('./../../assets/images/login/selectRember.png');
                     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
                         background-image: url('./../../assets/images/login/selectRember@2x.png');
-                        background-size: cover;
+                        background-size: contain;
                         background-position: center;
                     } 
+                }
+                .remember-password {
+                    width : 80px;
+                    cursor: pointer;
                 }
             }
         }
@@ -149,6 +352,33 @@
             line-height: 40px;
             text-align: center;
             color : #fff;
+            margin : 10px auto;
+            font-size : 18px;
+            cursor: pointer;
+        }
+        .login-button {
+            background:linear-gradient(180deg,rgba(59,165,178,1) 0%,rgba(72,168,218,1) 100%);
+        }
+        .login-button:link {
+            background: rgba(59,165,178,1);
+        }
+        .login-button:visited {
+            background: rgba(72,168,218,1);
+        }
+        .login-button:hover {
+            background: rgba(59,165,178,1);
+        }
+        .login-button:active {
+            background: rgba(72,168,218,1);
+        }
+        // .get-login-verify-button:hover {
+        //     background: rgba(59,165,178,1);
+        // }
+        .register-button {
+            width:339px;
+            height:40px;
+            border-radius:20px;
+            border:1px solid rgba(66,145,186,1);
         }
     }
     &-left{

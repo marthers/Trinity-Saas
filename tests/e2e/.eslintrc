@@ -3,8 +3,8 @@
     "cypress"
   ],
   "env": {
-    "mocha": true,
-    "cypress/globals": true
+    "mocha": false,
+    "cypress/globals": false
   },
   "rules": {
     "strict": "off"

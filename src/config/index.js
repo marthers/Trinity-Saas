@@ -5,7 +5,7 @@ export default {
   cookieExpires: 1,
   /**
    * @description 是否使用国际化，默认为false
-   *              如果不使用，则需要在路由中给需要在菜单中展示的路由设置meta: {title: 'xxx'}
+   * 如果不使用，则需要在路由中给需要在菜单中展示的路由设置meta: {title: 'xxx'}
    *              用来在菜单中显示文字
    */
   useI18n: true,
@@ -13,7 +13,8 @@ export default {
    * @description api请求基础路径
    */
   baseUrl: {
-    dev: 'https://www.easy-mock.com/mock/5add9213ce4d0e69998a6f51/iview-admin/',
+    // dev: 'http://39.104.203.178:8090/pages/viewpage.action?pageId=327726',
+    dev: 'http://192.168.50.154:8090/trinity-backstage-account/',
     pro: 'https://produce.com'
   },
   /**
